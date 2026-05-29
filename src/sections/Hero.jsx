@@ -53,7 +53,7 @@ export default function Hero() {
         </h1>
 
         <p style={{ fontFamily: 'var(--fb)', fontSize: 'clamp(14px,1.8vw,17px)', color: 'rgba(255,255,255,.58)', lineHeight: 2.05, maxWidth: 640, margin: '0 auto 48px' }}>
-          مؤسسة متخصصة في الإرشاد الأكاديمي وخدمات الدراسة بالخارج، تساعد الطلاب على بناء مسارات تعليمية واضحة والوصول إلى أفضل الفرص الجامعية الدولية عبر تجربة احترافية متكاملة.
+          Global Gate Academy مؤسسة متخصصة في الإرشاد الأكاديمي وخدمات الدراسة بالخارج، تساعد الطلاب على بناء مسارات تعليمية واضحة والوصول إلى أفضل الفرص الجامعية الدولية عبر تجربة احترافية متكاملة.
         </p>
 
         {/* Buttons */}
@@ -71,7 +71,7 @@ export default function Hero() {
       </div>
 
       {/* Stats strip */}
-      <div style={{
+      {/* <div style={{
         position: 'absolute', bottom: 0, right: 0, left: 0,
         background: 'linear-gradient(to top, rgba(8,15,30,.95) 0%, transparent 100%)',
         padding: '48px 28px 28px',
@@ -86,7 +86,7 @@ export default function Hero() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
