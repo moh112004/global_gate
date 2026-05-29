@@ -1,0 +1,100 @@
+/* ── Global Gate Academy — Global Styles ── */
+
+@font-face {
+  font-family: 'HacenTunisia';
+  src: url('/fonts/HacenTunisia.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --pp: #7B35D0; --bl: #1B87E4; --cy: #00C9C8;
+  --dk: #080F1E; --dk2: #0C1830;
+  --tx: #1A2744; --mt: #5A6A8A;
+  --bg: #F5F8FF; --wh: #FFFFFF;
+  --grad: linear-gradient(135deg, #7B35D0 0%, #1B87E4 55%, #00C9C8 100%);
+  --fh: 'HacenTunisia','Noto Kufi Arabic',sans-serif;
+  --fb: 'Noto Kufi Arabic','Segoe UI',sans-serif;
+  --sh1: 0 1px 4px rgba(10,22,40,.06);
+  --sh2: 0 4px 16px rgba(10,22,40,.09);
+  --sh3: 0 10px 40px rgba(10,22,40,.13);
+  --sh-pp: 0 6px 24px rgba(123,53,208,.28);
+  --r: 18px; --rs: 10px; --rp: 100px;
+}
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+body {
+  font-family:var(--fb); background:var(--bg); color:var(--tx);
+  direction:rtl; text-align:right; line-height:1.8; overflow-x:hidden;
+}
+h1,h2,h3,h4 { font-family:var(--fh); line-height:1.35; }
+img { max-width:100%; display:block; }
+button { cursor:pointer; font-family:var(--fb); }
+a { text-decoration:none; color:inherit; }
+
+.gc { max-width:1200px; margin:0 auto; padding:0 28px; }
+.gs { padding:90px 0; }
+
+.g-tag { display:inline-flex; align-items:center; gap:8px; background:rgba(123,53,208,.07); border:1px solid rgba(123,53,208,.15); color:var(--pp); padding:5px 16px; border-radius:var(--rp); font-size:13px; font-weight:600; margin-bottom:14px; }
+.g-dot { width:6px; height:6px; border-radius:50%; background:var(--grad); display:inline-block; flex-shrink:0; }
+.g-title { font-family:var(--fh); font-size:clamp(24px,3vw,44px); color:var(--tx); margin-bottom:12px; }
+.g-sub { font-size:16px; color:var(--mt); line-height:1.95; max-width:600px; }
+.g-divider { width:52px; height:4px; background:var(--grad); border-radius:2px; margin:18px 0 32px; }
+
+.g-grad { background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.g-grad-lt { background:linear-gradient(135deg,#B48EFF,#73C3FF 50%,#5EECEA); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+.g-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:none; border-radius:var(--rp); font-family:var(--fh); font-size:15px; font-weight:700; padding:12px 26px; cursor:pointer; transition:all .3s ease; white-space:nowrap; text-decoration:none; }
+.g-btn-prim  { background:var(--grad); color:#fff; box-shadow:var(--sh-pp); }
+.g-btn-prim:hover  { transform:translateY(-2px); box-shadow:0 10px 30px rgba(123,53,208,.42); }
+.g-btn-glass { background:rgba(255,255,255,.1); color:#fff; border:1.5px solid rgba(255,255,255,.32); backdrop-filter:blur(8px); }
+.g-btn-glass:hover { background:rgba(255,255,255,.18); border-color:rgba(255,255,255,.55); }
+.g-btn-outline { background:transparent; color:var(--tx); border:1.5px solid rgba(123,53,208,.22); }
+.g-btn-outline:hover { border-color:var(--pp); color:var(--pp); }
+
+.g-card { background:var(--wh); border-radius:var(--r); border:1px solid rgba(220,225,245,.8); box-shadow:var(--sh1); transition:transform .3s ease,box-shadow .3s ease; }
+.g-card:hover { transform:translateY(-5px); box-shadow:var(--sh3); }
+
+.g-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.g-grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+
+@keyframes fadeUp   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes glow     { 0%,100%{opacity:.25;transform:scale(1)} 50%{opacity:.45;transform:scale(1.07)} }
+@keyframes bounce   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes fadeIn   { from{opacity:0} to{opacity:1} }
+@keyframes slideDown { from{opacity:0;transform:translateY(-12px)} to{opacity:1;transform:translateY(0)} }
+
+@media(max-width:960px){ .gs{padding:72px 0} .g-grid-3{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:600px){ .gs{padding:56px 0} .g-grid-3,.g-grid-2{grid-template-columns:1fr} .gc{padding:0 18px} }
+
+.nav-desktop { display:flex; }
+.nav-mobile-btn { display:none; }
+@media(max-width:900px){ .nav-desktop{display:none!important} .nav-mobile-btn{display:flex!important} }
+
+/* ── Footer grid ── */
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1.4fr; gap:40px; }
+@media(max-width:860px){ .footer-grid { grid-template-columns:1fr 1fr; gap:28px; } }
+@media(max-width:480px){ .footer-grid { grid-template-columns:1fr; gap:24px; } }
+
+/* ── Contact form two-col row ── */
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:560px){ .form-row { grid-template-columns:1fr; } }
+
+/* ── Hero section ── */
+@media(max-width:600px){
+  .hero-section { padding:100px 20px 150px !important; }
+  .hero-stats { gap:14px 28px !important; }
+}
+
+/* ── Page hero ── */
+@media(max-width:600px){ .page-hero { padding:110px 20px 60px !important; } }
+
+/* ── Dark program cards on mobile ── */
+@media(max-width:600px){ .program-card { padding:24px 20px !important; } }
+
+/* ── About / why-us dark card ── */
+@media(max-width:600px){ .why-us-card { padding:28px 22px !important; } }
+
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--grad); border-radius:3px; }
